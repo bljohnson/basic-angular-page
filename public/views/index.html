@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Single Page Angular Web Application</title>
+		<script src="../vendors/angular.min.js" charset="utf-8"></script>
+		<script src="../vendors/angular-route.min.js" charset="utf-8"></script>
+		<script src="../scripts/script.js" charset="utf-8"></script>
+	</head>
+	<body ng-app="myApp">
+			<div>
+				<nav>
+					<ul>
+						<li><a href="#/">Home</a></li>
+						<li><a href="#/about">About</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div ng-view>
+				<!-- This DIV loads page templates depending upon route - where content is injected. -->
+			</div>
+	</body>
+</html>
