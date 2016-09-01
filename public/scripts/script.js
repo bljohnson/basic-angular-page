@@ -17,15 +17,22 @@ app.config(function($routeProvider) {
 // define a controller
 app.controller('mainController', function($scope) {
 	$scope.message = 'Everyone come see how good I look!';
-	$scope.customer = {
+	$scope.naomi = {
 		name: 'Naomi',
   		address: '1600 Amphitheatre'
+	};
+	$scope.igor = {
+		name: 'Igor',
+		address: '123 Somewhere'
 	};
 })
 // custom directive
 .directive('myCustomer', function() {
 	return {
 		restrict: 'E',
+		scope: {
+			customerInfo: '=info'
+		},
 		templateUrl: 'views/templates/my-customer.html'
 	};
 });
