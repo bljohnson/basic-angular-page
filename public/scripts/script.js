@@ -17,6 +17,16 @@ app.config(function($routeProvider) {
 // define a controller
 app.controller('mainController', function($scope) {
 	$scope.message = 'Everyone come see how good I look!';
+	$scope.customer = {
+		name: 'Naomi',
+  		address: '1600 Amphitheatre'
+	};
+})
+// custom directive
+.directive('myCustomer', function() {
+	return {
+		template: 'Name: {{customer.name}} Address: {{customer.address}}'
+	};
 });
 
 app.controller('aboutController', function($scope) {
