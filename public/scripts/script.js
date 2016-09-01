@@ -25,7 +25,8 @@ app.controller('mainController', function($scope) {
 // custom directive
 .directive('myCustomer', function() {
 	return {
-		template: 'Name: {{customer.name}} Address: {{customer.address}}'
+		restrict: 'E',
+		templateUrl: 'views/templates/my-customer.html'
 	};
 });
 
